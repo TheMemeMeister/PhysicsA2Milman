@@ -6,13 +6,12 @@ public class PlungerBehaviour : MonoBehaviour
 {
     [SerializeField, HideInInspector]
     public float PlungeForce;
-    [SerializeField, Range(1, 1000), Tooltip("Maximum Force of Plunger")]
     public float PlungeMax = 100f;
 
     List<Rigidbody> Ballrb;
     public Slider PSlider;
 
-    bool bFiring = false;
+    bool bFiring;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,12 +37,12 @@ public class PlungerBehaviour : MonoBehaviour
         {
             //Punger Input is pressed
             bFiring = true;
-            if (Input.GetKeyDown(KeyCode.Space)) //redo this with action mappings in project settings 
+            if (Input.GetKey(KeyCode.Space)) //redo this with action mappings in project settings 
             {
                 //while Plungeforce < Maxforce
                 if (PlungeForce <= PlungeMax)
                 {
-                    PlungeForce += 50 * Time.deltaTime;
+                    PlungeForce += 100 * Time.deltaTime;
                 }
             }
             if (Input.GetKeyUp(KeyCode.Space))
