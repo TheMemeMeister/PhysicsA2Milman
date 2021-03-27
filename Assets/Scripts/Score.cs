@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class Score : MonoBehaviour
 {
     public Rigidbody r_ball;
     //public Rigidbody r_robo;
-    public Text scoreText;
-    public float fScore = 0;
-
+    public TextMeshProUGUI scoreText;
+    public int fScore;
     private void Start()
     {
-        scoreText = FindObjectOfType<Text>();
+        //scoreText = GetComponent<TextMeshProUGUI>();
+        fScore = 0;
     }
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score: " + fScore;
+     
+        scoreText.text = fScore.ToString();
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -26,7 +28,7 @@ public class Score : MonoBehaviour
             //SoundManagerScript.PlaySound("GoalSound");
             r_ball = other.gameObject.GetComponent<Rigidbody>();
 
-            fScore+= 200;
+            fScore += 200;
         }
     }
 }
