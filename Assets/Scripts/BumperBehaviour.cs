@@ -6,11 +6,11 @@ public class BumperBehaviour : MonoBehaviour
 {
     private Rigidbody r_ball;
     Vector3 oldVel;
-
+    Score myscore;
 
     void Start()
     {
-      
+        Score.fScore = 0;
         r_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
         //scoreText = GetComponent<TextMeshProUGUI>();
     }
@@ -37,8 +37,9 @@ public class BumperBehaviour : MonoBehaviour
 
             // bumper effect to speed up ball
             r_ball.velocity += cp.normal * 2.0f;
+            Score.fScore += 250;
+            Debug.Log("Score is " + Score.fScore);
 
-         
         }
         if (other.gameObject.CompareTag("Passsive Bumper"))
         {
@@ -51,15 +52,17 @@ public class BumperBehaviour : MonoBehaviour
             r_ball.velocity = Vector3.Reflect(oldVel, cp.normal);
             //not adding the extra boost for the passive bumpers. 
             r_ball.velocity = cp.normal;
-         
+            Score.fScore += 100;
+            Debug.Log("Score is " + Score.fScore);
         }
 
         if (other.gameObject.CompareTag("BashToy"))
         {
             //SoundManagerScript.PlaySound("GoalSound");
             r_ball = other.gameObject.GetComponent<Rigidbody>();
+            Score.fScore += 500;
+            Debug.Log("Score is " + Score.fScore);
 
-        
         }
     }
 

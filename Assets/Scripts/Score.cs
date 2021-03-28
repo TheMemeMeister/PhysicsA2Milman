@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class Score : MonoBehaviour
+ class Score : MonoBehaviour
 {
     public Rigidbody r_ball;
     //public Rigidbody r_robo;
     public TextMeshProUGUI scoreText;
-    public int fScore;
+    public static int fScore;
     private void Start()
     {
         //scoreText = GetComponent<TextMeshProUGUI>();
@@ -20,15 +20,5 @@ public class Score : MonoBehaviour
 
         scoreText.text = fScore.ToString();
     }
-    private void OnCollisionEnter(Collision other)
-    {
-
-        if (other.gameObject.CompareTag("BashToy"))
-        {
-            //SoundManagerScript.PlaySound("GoalSound");
-            r_ball = other.gameObject.GetComponent<Rigidbody>();
-
-            fScore += 200;
-        }
-    }
+    
 }

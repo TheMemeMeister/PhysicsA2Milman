@@ -21,7 +21,7 @@ public class Net : MonoBehaviour
 
         if (lives == 0 )
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(2);
         }
     }
     void OnCollisionEnter(Collision other)
