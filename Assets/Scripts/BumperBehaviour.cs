@@ -28,6 +28,8 @@ public class BumperBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Bumper"))
         {
             Debug.Log("Collision with active Bumper");
+            
+
             ContactPoint cp = other.contacts[0];
             // calculate with addition of normal vector
             // myRigidbody.velocity = oldVel + cp.normal*2.0f*oldVel.magnitude;
@@ -37,6 +39,12 @@ public class BumperBehaviour : MonoBehaviour
 
             // bumper effect to speed up ball
             r_ball.velocity += cp.normal * 2.0f;
+
+            // adding transform to bumper to simulate hit effect
+            other.transform.localScale += new Vector3(0.1f, 0.1f, 0);
+
+            //Setting the transform back 
+            //gameObject.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
             Score.fScore += 250;
             Debug.Log("Score is " + Score.fScore);
 
@@ -65,5 +73,5 @@ public class BumperBehaviour : MonoBehaviour
 
         }
     }
-
+  
 }
