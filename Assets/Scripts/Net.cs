@@ -18,6 +18,7 @@ public class Net : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (lives == 0 )
         {
             //obs this is where I switch scenes to lose scene 

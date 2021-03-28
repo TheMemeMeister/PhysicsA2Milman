@@ -2585,12 +2585,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184544737}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7, y: 1.224, z: -0.23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.04, y: 0.36648, z: 3.5779002}
+  m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
   m_Children: []
-  m_Father: {fileID: 1590245645}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &187609592
 GameObject:
@@ -8808,18 +8808,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757162033}
   m_Mesh: {fileID: -1234514521799612479, guid: 40b4ce8cc4d9c49468f4dbfc846ea4f5, type: 3}
---- !u!114 &762660440 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6376285568208945716, guid: 2f4f852f01858f3458731aa18e2d9ef0,
-    type: 3}
-  m_PrefabInstance: {fileID: 6376285567679409073}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &763365178
 GameObject:
   m_ObjectHideFlags: 0
@@ -9340,6 +9328,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777849817}
   m_Mesh: {fileID: 2887270849542883556, guid: 40b4ce8cc4d9c49468f4dbfc846ea4f5, type: 3}
+--- !u!1 &780247155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1897449170011667503, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
+    type: 3}
+  m_PrefabInstance: {fileID: 1897449171771717996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &780247159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780247155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb24faa10a580a4fa3daf073bdf12f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 6376285568208945716, guid: 2f4f852f01858f3458731aa18e2d9ef0,
+    type: 3}
+  fScore: 0
 --- !u!1 &788571230
 GameObject:
   m_ObjectHideFlags: 0
@@ -9970,9 +9979,10 @@ GameObject:
   - component: {fileID: 836474821}
   - component: {fileID: 836474820}
   - component: {fileID: 836474825}
+  - component: {fileID: 836474824}
   m_Layer: 0
   m_Name: Bumper (2)
-  m_TagString: Bumper
+  m_TagString: Passsive Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9985,7 +9995,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836474819}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -10054,6 +10064,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &836474824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836474819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb24faa10a580a4fa3daf073bdf12f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  fScore: 0
 --- !u!54 &836474825
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10064,11 +10088,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &838607330
 GameObject:
@@ -14220,6 +14244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1150453055}
   - component: {fileID: 1150453056}
+  - component: {fileID: 1150453057}
   m_Layer: 0
   m_Name: BashToy
   m_TagString: BashToy
@@ -14235,7 +14260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150453054}
   m_LocalRotation: {x: -0, y: 0.99934703, z: -0, w: -0.036132786}
-  m_LocalPosition: {x: -1.029, y: -0.154, z: -0.02}
+  m_LocalPosition: {x: -1.68, y: -0.154, z: 1}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 711257107}
@@ -14255,6 +14280,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.2636623, y: 7.1553545, z: 2.6078572}
   m_Center: {x: -0.43195948, y: 3.077766, z: 0.025056204}
+--- !u!54 &1150453057
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150453054}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1150527520
 GameObject:
   m_ObjectHideFlags: 0
@@ -15150,7 +15191,7 @@ GameObject:
   - component: {fileID: 1227263966}
   m_Layer: 0
   m_Name: Bumper (1)
-  m_TagString: Bumper
+  m_TagString: Passsive Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15163,7 +15204,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227263960}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -15242,11 +15283,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1228389842
 GameObject:
@@ -16623,6 +16664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1334484729}
   - component: {fileID: 1334484728}
+  - component: {fileID: 1334484730}
   m_Layer: 0
   m_Name: BashToy (1)
   m_TagString: BashToy
@@ -16651,13 +16693,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334484727}
   m_LocalRotation: {x: -0, y: 0.99934703, z: -0, w: -0.036132786}
-  m_LocalPosition: {x: 1.56, y: -0.154, z: -0.02}
+  m_LocalPosition: {x: 1.68, y: -0.154, z: 1}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 2064442050}
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 184.141, z: 0}
+--- !u!54 &1334484730
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334484727}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1334896274
 GameObject:
   m_ObjectHideFlags: 0
@@ -17443,7 +17501,7 @@ GameObject:
   - component: {fileID: 1413992157}
   - component: {fileID: 1413992156}
   - component: {fileID: 1413992155}
-  - component: {fileID: 1413992160}
+  - component: {fileID: 1413992159}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Bumper
@@ -17459,7 +17517,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413992154}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -17528,7 +17586,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1413992160
+--- !u!54 &1413992159
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17538,11 +17596,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1417420153
 GameObject:
@@ -19633,12 +19691,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583769140}
   m_Mesh: {fileID: -4309264882492206836, guid: 40b4ce8cc4d9c49468f4dbfc846ea4f5, type: 3}
---- !u!4 &1590245645 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
-    type: 3}
-  m_PrefabInstance: {fileID: 1897449171771717996}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1601922330
 GameObject:
   m_ObjectHideFlags: 0
@@ -20104,7 +20156,6 @@ GameObject:
   - component: {fileID: 1625082044}
   - component: {fileID: 1625082043}
   - component: {fileID: 1625082042}
-  - component: {fileID: 1625082046}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -20189,21 +20240,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1625082046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625082041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78f2f952f95cb2144b9094b6907428fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  r_ball: {fileID: 2066236744}
-  scoreText: {fileID: 762660440}
-  fScore: 0
 --- !u!1 &1628888808
 GameObject:
   m_ObjectHideFlags: 0
@@ -20543,10 +20579,11 @@ GameObject:
   - component: {fileID: 1647895403}
   - component: {fileID: 1647895402}
   - component: {fileID: 1647895401}
+  - component: {fileID: 1647895405}
   - component: {fileID: 1647895406}
   m_Layer: 0
   m_Name: Bumper (3)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20559,7 +20596,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647895400}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -20628,7 +20665,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1647895406
+--- !u!54 &1647895405
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20642,8 +20679,22 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1647895406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647895400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb24faa10a580a4fa3daf073bdf12f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  fScore: 0
 --- !u!1 &1648292526
 GameObject:
   m_ObjectHideFlags: 0
@@ -21432,7 +21483,7 @@ GameObject:
   - component: {fileID: 1701319679}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Bumper
+  m_TagString: Passsive Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26567,17 +26618,17 @@ PrefabInstance:
     - target: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.05
+      value: 3.03
       objectReference: {fileID: 0}
     - target: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.036
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.46
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}
