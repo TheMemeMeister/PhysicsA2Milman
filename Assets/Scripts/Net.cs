@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Net : MonoBehaviour
 {
     public Rigidbody r_ball;
@@ -21,7 +21,7 @@ public class Net : MonoBehaviour
 
         if (lives == 0 )
         {
-            //obs this is where I switch scenes to lose scene 
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     void OnCollisionEnter(Collision other)
@@ -32,7 +32,8 @@ public class Net : MonoBehaviour
             r_ball.velocity = Vector3.zero;
             r_ball.transform.position = ballspawn.transform.position;
             Debug.Log("Ball fell out of bounds");
-            lives--; 
+            lives--;
+            Debug.Log("Lives: " + lives);
 
         }
     }
