@@ -42,7 +42,7 @@ public class BumperBehaviour : MonoBehaviour
 
             // adding transform to bumper to simulate hit effect
             other.transform.localScale += new Vector3(0.1f, 0.1f, 0);
-
+            //other.gameObject.getcomponent<Material>();
             //Setting the transform back 
             //gameObject.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
             Score.fScore += 250;
