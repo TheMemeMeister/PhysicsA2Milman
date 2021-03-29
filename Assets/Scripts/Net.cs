@@ -19,10 +19,7 @@ public class Net : MonoBehaviour
     void Update()
     {
 
-        if (lives == 0 )
-        {
-            SceneManager.LoadScene(2);
-        }
+        
     }
     void OnCollisionEnter(Collision other)
     {
@@ -34,7 +31,11 @@ public class Net : MonoBehaviour
             Debug.Log("Ball fell out of bounds");
             lives--;
             Debug.Log("Lives: " + lives);
-
+            if (lives == 0)
+            {
+                SceneManager.LoadScene("Lose Scene");
+                Debug.Log("you lose");
+            }
         }
     }
 }

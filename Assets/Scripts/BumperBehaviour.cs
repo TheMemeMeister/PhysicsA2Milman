@@ -42,6 +42,10 @@ public class BumperBehaviour : MonoBehaviour
 
             // adding transform to bumper to simulate hit effect
             other.transform.localScale += new Vector3(0.1f, 0.1f, 0);
+            StartCoroutine(BumperDelay(other));
+
+
+
             //other.gameObject.getcomponent<Material>();
             //Setting the transform back 
             //gameObject.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
@@ -73,5 +77,11 @@ public class BumperBehaviour : MonoBehaviour
 
         }
     }
-  
+    IEnumerator BumperDelay(Collision other)
+    {
+        // suspend execution for 5 seconds
+        yield return new WaitForSeconds(0.1f);
+        other.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
+        Debug.Log("coroutine called");
+    }
 }
