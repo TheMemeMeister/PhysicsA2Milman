@@ -20,9 +20,8 @@ public class PlungerBehaviour : MonoBehaviour
     [SerializeField]
     private float m_fMass;
     [SerializeField]
-    private Rigidbody m_attachedBody = null;
-    [SerializeField]
-    private bool m_bIsBungee = false;
+    private Rigidbody m_attachedBody;
+ 
 
     private Vector3 m_vForce;
     private Vector3 m_vPrevVel;
@@ -60,6 +59,8 @@ public class PlungerBehaviour : MonoBehaviour
             bFiring = true;
             if (Input.GetKey(KeyCode.Space)) //redo this with action mappings in project settings 
             {
+                m_attachedBody.isKinematic = true;
+                m_attachedBody.position = new Vector3(0.0f, 0.0f, -PlungeForce / 100);
                 //while Plungeforce < Maxforce
                 if (PlungeForce <= PlungeMax)
                 {
@@ -71,13 +72,18 @@ public class PlungerBehaviour : MonoBehaviour
 
                 }
             }
-            m_attachedBody.position = new Vector3(0.0f, 0.0f, -PlungeForce / 100);
+           // m_attachedBody.position = new Vector3(0.0f, 0.0f, -PlungeForce / 100);
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                //once space is let go, move the handle back. 
-                //m_attachedBody.MovePosition(m_vRestPos);
+                UpdateSpringForce();
                 foreach (Rigidbody r in Ballrb)
                 {
+                    //adding the force of the rod + sphere to the ball
+                    //F = -kx (Hooks law)
+                    Vector3 forceadded = (PlungeForce/100 * m_vForce * -CalculateSpringConstant() + Vector3.forward);
+                    r.AddForce(forceadded.magnitude * Vector3.forward, ForceMode.Acceleration);
+                    Debug.Log("Force added is" + forceadded);
+
                     //r.AddForce(PlungeForce * Vector3.forward);
 
                     //m_attachedBody.MovePosition(new Vector3(0.0f, 0.0f, -PlungeForce));
@@ -109,41 +115,34 @@ public class PlungerBehaviour : MonoBehaviour
             PlungeForce = 0f;
         }
     }
-    //private float CalculateSpringConstant()
-    //{
-    //    // k = F / dX
-    //    // F = m * a
-    //    // k = m * a / (xf - xi)
+    private float CalculateSpringConstant()
+    {
+        // k = F / dX
+        // F = m * a
+        // k = m * a / (xf - xi)
 
-    //    float fDX = (m_vRestPos - m_attachedBody.transform.position).magnitude;
+        float fDX = (m_vRestPos - m_attachedBody.transform.position).magnitude;
 
-    //    if (fDX <= 0f)
-    //    {
-    //        return Mathf.Epsilon;
-    //    }
+        if (fDX <= 0f)
+        {
+            return Mathf.Epsilon;
+        }
 
-    //    return (m_fMass * Physics.gravity.y) / (fDX);
-    //}
-    //private void UpdateSpringForce()
-    //{
-    //    // F = -kx
-    //    // F = -kx -bv
+        return (m_fMass * Physics.gravity.y) / (fDX);
+    }
+    private void UpdateSpringForce()
+    {
+        //F = -kx
+        // F = -kx - bv
 
-    //    if (m_bIsBungee)
-    //    {
-    //        float fLen = (m_vRestPos - m_attachedBody.transform.position).magnitude;
 
-    //        if (fLen <= m_vRestPos.y)
-    //        {
-    //            return;
-    //        }
-    //    }
 
-    //    m_vForce = -m_fSpringConstant * (m_vRestPos - m_attachedBody.transform.position) -
-    //        m_fDampingConstant * (m_attachedBody.velocity - m_vPrevVel)* PlungeForce;
 
-    //    m_attachedBody.AddForce(m_vForce, ForceMode.Acceleration);
+        m_vForce = -m_fSpringConstant * (m_vRestPos - m_attachedBody.transform.position) -
+            m_fDampingConstant * (m_attachedBody.velocity - m_vPrevVel) * PlungeForce;
 
-    //    m_vPrevVel = m_attachedBody.velocity;
-    //}
+        //m_attachedBody.AddForce(m_vForce, ForceMode.Acceleration);
+
+        m_vPrevVel = m_attachedBody.velocity;
+    }
 }

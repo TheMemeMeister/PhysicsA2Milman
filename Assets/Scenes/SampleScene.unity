@@ -24771,7 +24771,6 @@ MonoBehaviour:
   m_vRestPos: {x: 0.2166668, y: 0.208, z: -1.6}
   m_fMass: 1
   m_attachedBody: {fileID: 418155776}
-  m_bIsBungee: 0
 --- !u!1 &1918375267
 GameObject:
   m_ObjectHideFlags: 0

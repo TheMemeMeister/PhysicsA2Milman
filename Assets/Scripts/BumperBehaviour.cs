@@ -43,7 +43,7 @@ public class BumperBehaviour : MonoBehaviour
             // adding transform to bumper to simulate hit effect
             other.transform.localScale += new Vector3(0.1f, 0.1f, 0);
             StartCoroutine(BumperDelay(other));
-
+            
 
 
             //other.gameObject.getcomponent<Material>();
