@@ -42,6 +42,7 @@ public class BumperBehaviour : MonoBehaviour
 
             // adding transform to bumper to simulate hit effect
             other.transform.localScale += new Vector3(0.1f, 0.1f, 0);
+           // other.gameObject.GetComponent<Light>().color = new Vector4(1.0f, 1.0f, 0.0f, 1.0f);
             StartCoroutine(BumperDelay(other));
             
 
@@ -82,6 +83,7 @@ public class BumperBehaviour : MonoBehaviour
         // suspend execution for 5 seconds
         yield return new WaitForSeconds(0.1f);
         other.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
+        //other.gameObject.GetComponent<Light>().color = new Vector4(0.0f, 0.0f, 1.0f, 1.0f);
         Debug.Log("coroutine called");
     }
 }
