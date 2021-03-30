@@ -36,6 +36,7 @@ public class PlungerBehaviour : MonoBehaviour
         m_fMass = m_attachedBody.mass;
         //start plungerspring as unkinematic so ball can hit the collider
         m_attachedBody.isKinematic = false;
+        m_vRestPos = m_attachedBody.transform.position;
     }
 
     // Update is called once per frame
@@ -60,7 +61,7 @@ public class PlungerBehaviour : MonoBehaviour
             if (Input.GetKey(KeyCode.Space)) //redo this with action mappings in project settings 
             {
                 m_attachedBody.isKinematic = true;
-                m_attachedBody.position = new Vector3(0.0f, 0.0f, -PlungeForce / 100);
+               
                 //while Plungeforce < Maxforce
                 if (PlungeForce <= PlungeMax)
                 {
@@ -71,6 +72,7 @@ public class PlungerBehaviour : MonoBehaviour
                    
 
                 }
+                m_attachedBody.position = m_vRestPos - new Vector3(0.0f, 0.0f, PlungeForce / 100);
             }
            // m_attachedBody.position = new Vector3(0.0f, 0.0f, -PlungeForce / 100);
             if (Input.GetKeyUp(KeyCode.Space))
@@ -80,7 +82,7 @@ public class PlungerBehaviour : MonoBehaviour
                 {
                     //adding the force of the rod + sphere to the ball
                     //F = -kx (Hooks law)
-                    Vector3 forceadded = (PlungeForce/100 * m_vForce * -CalculateSpringConstant() + Vector3.forward);
+                    Vector3 forceadded = (PlungeForce/50 * m_vForce * -CalculateSpringConstant() + Vector3.forward);
                     r.AddForce(forceadded.magnitude * Vector3.forward, ForceMode.Acceleration);
                     Debug.Log("Force added is" + forceadded);
 

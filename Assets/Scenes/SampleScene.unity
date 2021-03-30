@@ -24768,7 +24768,7 @@ MonoBehaviour:
   PSlider: {fileID: 149461248}
   m_fSpringConstant: -50
   m_fDampingConstant: 20
-  m_vRestPos: {x: 0.2166668, y: 0.208, z: -1.6}
+  m_vRestPos: {x: 0.2166668, y: 0.208, z: -1.46}
   m_fMass: 1
   m_attachedBody: {fileID: 418155776}
 --- !u!1 &1918375267
