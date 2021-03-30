@@ -9,6 +9,7 @@ using TMPro;
     //public Rigidbody r_robo;
     public TextMeshProUGUI scoreText;
     public static int fScore;
+ 
     private void Start()
     {
         //scoreText = GetComponent<TextMeshProUGUI>();
@@ -18,7 +19,8 @@ using TMPro;
     void Update()
     {
 
-        scoreText.text = fScore.ToString();
+        scoreText.text = "Score: " + fScore.ToString();
+       
     }
     
 }

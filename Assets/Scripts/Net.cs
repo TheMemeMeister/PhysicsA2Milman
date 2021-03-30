@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class Net : MonoBehaviour
 {
     public Rigidbody r_ball;
     public GameObject ballspawn;
-    int lives = 3; //can use this later to implement a lives system and end screen
-    
+    static int lives = 3; //can use this later to implement a lives system and end screen
+    public TextMeshProUGUI livesText;
+   
 
     void Start()
     {
@@ -18,8 +20,8 @@ public class Net : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        livesText.text = "Lives: " + lives.ToString();
 
-        
     }
     void OnCollisionEnter(Collision other)
     {
