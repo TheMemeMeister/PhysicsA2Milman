@@ -7,7 +7,7 @@ public class Net : MonoBehaviour
 {
     public Rigidbody r_ball;
     public GameObject ballspawn;
-    static int lives = 3; //can use this later to implement a lives system and end screen
+    static float lives = 3; //can use this later to implement a lives system and end screen
     public TextMeshProUGUI livesText;
    
 

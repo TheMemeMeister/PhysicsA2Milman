@@ -77,6 +77,7 @@ public class PlungerBehaviour : MonoBehaviour
            // m_attachedBody.position = new Vector3(0.0f, 0.0f, -PlungeForce / 100);
             if (Input.GetKeyUp(KeyCode.Space))
             {
+                m_attachedBody.position = m_vRestPos;
                 UpdateSpringForce();
                 foreach (Rigidbody r in Ballrb)
                 {
