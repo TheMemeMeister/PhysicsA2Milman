@@ -4643,13 +4643,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331575552}
-  m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 1.57, y: 0, z: 3.75}
-  m_LocalScale: {x: 2.5, y: 0.5, z: 0.1}
+  m_LocalRotation: {x: -0, y: -0.24551646, z: -0, w: 0.9693924}
+  m_LocalPosition: {x: 2.046, y: 0, z: 3.829}
+  m_LocalScale: {x: 1.527275, y: 0.5, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: -20, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -28.425, z: 0}
 --- !u!1 &333005576
 GameObject:
   m_ObjectHideFlags: 0
@@ -6638,7 +6638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474528115}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.46, y: 0, z: -1.858}
+  m_LocalPosition: {x: -1.25, y: 0, z: 5.2}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 997404041}
@@ -15158,7 +15158,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1150453055}
   - component: {fileID: 1150453056}
-  - component: {fileID: 1150453057}
   m_Layer: 0
   m_Name: BashToy
   m_TagString: BashToy
@@ -15174,7 +15173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150453054}
   m_LocalRotation: {x: -0, y: 0.99934703, z: -0, w: -0.036132786}
-  m_LocalPosition: {x: -1.68, y: -0.154, z: 1}
+  m_LocalPosition: {x: -1.68, y: -0.154, z: -0.527}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 711257107}
@@ -15194,22 +15193,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.2636623, y: 7.1553545, z: 2.6078572}
   m_Center: {x: -0.43195948, y: 3.077766, z: 0.025056204}
---- !u!54 &1150453057
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150453054}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1150527520
 GameObject:
   m_ObjectHideFlags: 0
@@ -17465,7 +17448,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1334484729}
   - component: {fileID: 1334484728}
-  - component: {fileID: 1334484730}
   m_Layer: 0
   m_Name: BashToy (1)
   m_TagString: BashToy
@@ -17494,29 +17476,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334484727}
   m_LocalRotation: {x: -0, y: 0.99934703, z: -0, w: -0.036132786}
-  m_LocalPosition: {x: 1.68, y: -0.154, z: 1}
+  m_LocalPosition: {x: 1.68, y: -0.154, z: -0.527}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 2064442050}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 184.141, z: 0}
---- !u!54 &1334484730
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334484727}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1334896274
 GameObject:
   m_ObjectHideFlags: 0
@@ -27799,7 +27765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728091636667908571}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.631, y: 0, z: -1.858}
+  m_LocalPosition: {x: -1.43, y: 0, z: -2.06}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4754813198223272221}
@@ -27833,7 +27799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874912578440168174}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.016666649, y: 0.298, z: -2.158}
+  m_LocalPosition: {x: 0.016666649, y: 0.298, z: -2.46}
   m_LocalScale: {x: 83.33333, y: 50, z: 100}
   m_Children: []
   m_Father: {fileID: 966014934}
@@ -28024,6 +27990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1897449170011667492, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897449170011667492, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
+        type: 3}
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
@@ -28056,7 +28027,7 @@ PrefabInstance:
     - target: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.11
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}
@@ -28066,7 +28037,7 @@ PrefabInstance:
     - target: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.31
+      value: 5.29
       objectReference: {fileID: 0}
     - target: {fileID: 1897449170011667499, guid: e78cbe1c07ebf9f4890f7370f6ef7a52,
         type: 3}

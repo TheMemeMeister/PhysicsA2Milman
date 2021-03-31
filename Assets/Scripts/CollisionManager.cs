@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class BumperBehaviour : MonoBehaviour
+public class CollisionManager : MonoBehaviour
 {
     private Rigidbody r_ball;
     Vector3 oldVel;
@@ -41,7 +41,7 @@ public class BumperBehaviour : MonoBehaviour
             r_ball.velocity += cp.normal * 2.0f;
 
             // adding transform to bumper to simulate hit effect
-            other.transform.localScale += new Vector3(0.1f, 0.1f, 0);
+            other.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
            // other.gameObject.GetComponent<Light>().color = new Vector4(1.0f, 1.0f, 0.0f, 1.0f);
             StartCoroutine(BumperDelay(other));
             
@@ -79,9 +79,9 @@ public class BumperBehaviour : MonoBehaviour
     }
     IEnumerator BumperDelay(Collision other)
     {
-        // suspend execution for 5 seconds
+
         yield return new WaitForSeconds(0.1f);
-        other.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
+        other.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         //other.gameObject.GetComponent<Light>().color = new Vector4(0.0f, 0.0f, 1.0f, 1.0f);
         Debug.Log("coroutine called");
     }
