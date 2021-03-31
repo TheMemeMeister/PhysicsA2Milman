@@ -184,3 +184,73 @@ System memory in use after: 75.0 MB.
 Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2008.
 Total: 1.435900 ms (FindLiveObjects: 0.157500 ms CreateObjectMapping: 0.049800 ms MarkObjects: 1.186700 ms  DeleteObjects: 0.040700 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1172.754332 seconds.
+  path: Assets/Scripts/CollisionManager.cs
+  artifactKey: Guid(bdb24faa10a580a4fa3daf073bdf12f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CollisionManager.cs using Guid(bdb24faa10a580a4fa3daf073bdf12f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac37abc84363e1ff9e81a2cbc882b1af') in 0.011703 seconds
+  Import took 0.014436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008439 seconds.
+  path: Assets/Scripts/CollisionManager.cs
+  artifactKey: Guid(bdb24faa10a580a4fa3daf073bdf12f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CollisionManager.cs using Guid(bdb24faa10a580a4fa3daf073bdf12f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac37abc84363e1ff9e81a2cbc882b1af') in 0.001763 seconds
+  Import took 0.004396 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003269 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.628 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1515 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.5 MB.
+System memory in use after: 74.6 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2010.
+Total: 1.463600 ms (FindLiveObjects: 0.155900 ms CreateObjectMapping: 0.045000 ms MarkObjects: 1.219500 ms  DeleteObjects: 0.041900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003902 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.642 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1515 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.9 MB.
+System memory in use after: 75.0 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2012.
+Total: 1.789600 ms (FindLiveObjects: 0.163400 ms CreateObjectMapping: 0.049200 ms MarkObjects: 1.490200 ms  DeleteObjects: 0.085900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.690911 seconds.
+  path: Assets/Scripts/CollisionManager.cs
+  artifactKey: Guid(bdb24faa10a580a4fa3daf073bdf12f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CollisionManager.cs using Guid(bdb24faa10a580a4fa3daf073bdf12f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e108a8ec5328001102119b758cd5b5db') in 0.003537 seconds
+  Import took 0.005592 seconds .
+

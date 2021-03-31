@@ -63,7 +63,7 @@ public class BumperBehaviour : MonoBehaviour
 
             // calculate with Vector3.Reflect
             r_ball.velocity = Vector3.Reflect(oldVel, cp.normal);
-            //not adding the extra boost for the passive bumpers. 
+            //Slowing down the ball on passive bumpers
             r_ball.velocity = cp.normal * 0.75f;
             Score.fScore += 100;
             Debug.Log("Score is " + Score.fScore);
@@ -71,7 +71,7 @@ public class BumperBehaviour : MonoBehaviour
 
         if (other.gameObject.CompareTag("BashToy"))
         {
-            //SoundManagerScript.PlaySound("GoalSound");
+           
             Score.fScore += 500;
             Debug.Log("Score is " + Score.fScore);
 
