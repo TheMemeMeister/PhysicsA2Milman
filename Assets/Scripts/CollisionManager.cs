@@ -7,12 +7,16 @@ public class CollisionManager : MonoBehaviour
     private Rigidbody r_ball;
     Vector3 oldVel;
     Score myscore;
-
+    [SerializeField]
+    AudioClip CollisionSound;
+    [SerializeField]
+    AudioClip RobotSound;
     void Start()
     {
         Score.fScore = 0;
         r_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
         //scoreText = GetComponent<TextMeshProUGUI>();
+        
     }
 
     void FixedUpdate()
@@ -42,7 +46,8 @@ public class CollisionManager : MonoBehaviour
 
             // adding transform to bumper to simulate hit effect
             other.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
-           // other.gameObject.GetComponent<Light>().color = new Vector4(1.0f, 1.0f, 0.0f, 1.0f);
+
+            AudioSource.PlayClipAtPoint(CollisionSound, other.transform.position);
             StartCoroutine(BumperDelay(other));
             
 
@@ -60,18 +65,19 @@ public class CollisionManager : MonoBehaviour
             ContactPoint cp = other.contacts[0];
             // calculate with addition of normal vector
             // myRigidbody.velocity = oldVel + cp.normal*2.0f*oldVel.magnitude;
-
+            AudioSource.PlayClipAtPoint(CollisionSound, other.transform.position);
             // calculate with Vector3.Reflect
             r_ball.velocity = Vector3.Reflect(oldVel, cp.normal);
             //Slowing down the ball on passive bumpers
             r_ball.velocity = cp.normal * 0.75f;
             Score.fScore += 100;
             Debug.Log("Score is " + Score.fScore);
+            //SoundManager.PlaySound(SoundManager.Sound.RobotSound);
         }
 
         if (other.gameObject.CompareTag("BashToy"))
         {
-           
+            AudioSource.PlayClipAtPoint(RobotSound, other.transform.position);
             Score.fScore += 500;
             Debug.Log("Score is " + Score.fScore);
 

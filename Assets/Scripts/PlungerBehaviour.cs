@@ -21,7 +21,9 @@ public class PlungerBehaviour : MonoBehaviour
     private float m_fMass;
     [SerializeField]
     private Rigidbody m_attachedBody;
- 
+    [SerializeField]
+    AudioClip BreakSound;
+
 
     private Vector3 m_vForce;
     private Vector3 m_vPrevVel;
@@ -77,6 +79,8 @@ public class PlungerBehaviour : MonoBehaviour
            // m_attachedBody.position = new Vector3(0.0f, 0.0f, -PlungeForce / 100);
             if (Input.GetKeyUp(KeyCode.Space))
             {
+                AudioSource.PlayClipAtPoint(BreakSound, Camera.main.transform.position);
+                //SoundManager.PlaySound(SoundManager.Sound.BreakSound);
                 m_attachedBody.position = m_vRestPos;
                 UpdateSpringForce();
                 foreach (Rigidbody r in Ballrb)
